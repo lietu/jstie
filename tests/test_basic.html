@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../dist/tie.js"></script>
+</head>
+<body>
+<section>
+    <article>
+        <h1 data-tie="text: title"></h1>
+
+        <div data-tie="html: content"></div>
+    </article>
+</section>
+
+<script type="text/javascript">
+    var data = {
+        title: "Greatest article ever",
+        content: "<p>This is the greatest article ever</p>"
+    };
+
+    var tie = new Tie(data, document.querySelector("article"));
+
+</script>
+</body>
+</html>

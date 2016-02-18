@@ -1,0 +1,28 @@
+{
+  "name": "jstie",
+  "description": "Tie down your objects to DOM. Yet another two-way data binding library.",
+  "main": "dist/tie.js",
+  "authors": [
+    "Janne Enberg aka. Lietu"
+  ],
+  "license": "MIT and new BSD",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "data",
+    "binding"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "homepage": "jstie.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

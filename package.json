@@ -1,0 +1,28 @@
+{
+  "name": "jstie",
+  "version": "1.0.0",
+  "description": "Tie down your objects to DOM. Yet another two-way data binding library.",
+  "main": "dist/tie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/lietu/jstie"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "data binding",
+    "two-way data binding",
+    "dom binding"
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-execute": "^0.2.2",
+    "grunt-typescript": "^0.8.0"
+  },
+  "author": "Janne Enberg aka. Lietu",
+  "license": "MIT and new BSD"
+}

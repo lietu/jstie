@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../dist/tie.js"></script>
+</head>
+<body>
+    <section>
+        <h1>Current time is <span data-tie="text: time"></span></h1>
+        <h2>Current time is <span data-tie="text: time"></span></h2>
+        <h3>Current time is <span data-tie="text: time"></span></h3>
+        <h4>Current time is <span data-tie="text: time"></span></h4>
+        <h5>Current time is <span data-tie="text: time"></span></h5>
+        <h6>Current time is <span data-tie="text: time"></span></h6>
+
+    </section>
+
+    <script type="text/javascript">
+        function getTime() {
+            return Date.now();
+        }
+
+        var data = {
+            time: 0
+        };
+
+        var tie = new Tie(data, document.querySelector("section"));
+
+        function updateTime() {
+            data.time = getTime();
+            window.requestAnimationFrame(updateTime);
+        }
+
+        window.requestAnimationFrame(updateTime);
+    </script>
+</body>
+</html>

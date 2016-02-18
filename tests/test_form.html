@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../dist/tie.js"></script>
+</head>
+<body>
+<section>
+    <form>
+        <div>
+            <label for="first">First Name</label>
+            <input id="first" data-tie="value: user.name.first">
+        </div>
+        <div>
+
+
+            <label for="last">Last Name</label>
+            <input id="last" data-tie="value: user.name.last">
+        </div>
+        <button data-tie="click: sayHi">Say hi</button>
+    </form>
+
+    <p>
+        Hello, user #<span data-tie="text: user.id"></span> "<span
+            data-tie="text: user.name.last"></span>, <span
+            data-tie="text: user.name.first"></span>"
+    </p>
+</section>
+
+<script type="text/javascript">
+    var data = {
+        user: {
+            id: 1,
+            name: {
+                first: "John",
+                last: "Doe"
+            }
+        },
+        sayHi: sayHi
+    };
+
+    function sayHi() {
+        alert("Hello, " + data.user.name.first + " " + data.user.name.last);
+    }
+
+    var tie = new Tie(data, document.querySelector("section"));
+
+</script>
+</body>
+</html>
