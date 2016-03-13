@@ -82,8 +82,8 @@ export class Tie {
             _this.listeners[type] = [];
         });
 
-        this._setRootElement(element);
         this._setData(data);
+        this._setRootElement(element);
         this.refresh();
     }
 
@@ -384,7 +384,7 @@ export class Tie {
         let value = ret.obj[ret.key];
 
         let _this = this;
-        
+
         let type;
         for (type in this.bindings[path]) {
             if (!this.bindings[path].hasOwnProperty(type)) {

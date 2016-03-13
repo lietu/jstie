@@ -4,9 +4,9 @@
         define([], factory);
     } else if (typeof exports === 'object') {
         // Node, CommonJS-like
-        module.exports = factory(require('jquery'));
+        module.exports = factory();
     } else {
         // Browser globals (root is window)
-        root.returnExports = factory(root.jQuery);
+        root.Tie = factory();
     }
 }(this, function () {
